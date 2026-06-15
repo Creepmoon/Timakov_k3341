@@ -1,0 +1,26 @@
+site_name: Лабораторная работа 3 — Docker, Celery, Redis
+site_description: Документация к контейнеризации FastAPI, парсера и асинхронной очереди задач
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+
+nav:
+  - Главная: index.md
+  - Установка: setup.md
+  - Подзадача 1 — Docker: task1-docker.md
+  - Подзадача 2 — Вызов парсера: task2-parser.md
+  - Подзадача 3 — Celery и Redis: task3-celery.md
+  - API: api.md
+  - Архитектура: architecture.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
