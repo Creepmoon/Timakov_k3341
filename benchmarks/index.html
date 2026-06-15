@@ -6,13 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Документация к серверному приложению платформы поиска партнёров для проектов">
+        <meta name="description" content="Документация к программам сравнения threading, multiprocessing и asyncio">
       
       
       
       
-        <link rel="prev" href="../auth/">
+        <link rel="prev" href="../task2/">
       
+      
+        <link rel="next" href="../theory/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Практики - CollabPlatform — Лабораторная работа 1</title>
+        <title>Замеры и сравнение - Лабораторная работа 2 — Потоки, процессы, асинхронность</title>
       
     
     
@@ -64,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1113" class="md-skip">
+        <a href="#_1" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -80,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href=".." title="CollabPlatform — Лабораторная работа 1" class="md-header__button md-logo" aria-label="CollabPlatform — Лабораторная работа 1" data-md-component="logo">
+    <a href=".." title="Лабораторная работа 2 — Потоки, процессы, асинхронность" class="md-header__button md-logo" aria-label="Лабораторная работа 2 — Потоки, процессы, асинхронность" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -94,13 +96,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            CollabPlatform — Лабораторная работа 1
+            Лабораторная работа 2 — Потоки, процессы, асинхронность
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Практики
+              Замеры и сравнение
             
           </span>
         </div>
@@ -178,13 +180,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="CollabPlatform — Лабораторная работа 1" class="md-nav__button md-logo" aria-label="CollabPlatform — Лабораторная работа 1" data-md-component="logo">
+    <a href=".." title="Лабораторная работа 2 — Потоки, процессы, асинхронность" class="md-nav__button md-logo" aria-label="Лабораторная работа 2 — Потоки, процессы, асинхронность" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    CollabPlatform — Лабораторная работа 1
+    Лабораторная работа 2 — Потоки, процессы, асинхронность
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -250,14 +252,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../models/" class="md-nav__link">
+      <a href="../task1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Модель данных
+    Задача 1 — Подсчёт суммы
   
 
     
@@ -277,41 +279,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+      <a href="../task2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../auth/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Авторизация
+    Задача 2 — Парсинг веб-страниц
   
 
     
@@ -347,7 +322,7 @@
   <span class="md-ellipsis">
     
   
-    Практики
+    Замеры и сравнение
   
 
     
@@ -365,7 +340,7 @@
   <span class="md-ellipsis">
     
   
-    Практики
+    Замеры и сравнение
   
 
     
@@ -391,44 +366,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#11-fastapi-" class="md-nav__link">
+  <a href="#1-cpu-bound" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Практика 1.1 — Базовое FastAPI-приложение
+        Задача 1 — CPU-bound (подсчёт суммы)
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-sqlmodel-postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Практика 1.2 — SQLModel и PostgreSQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13-env" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Практика 1.3 — Миграции, ENV, структура
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Практика 1.3 — Миграции, ENV, структура">
+    <nav class="md-nav" aria-label="Задача 1 — CPU-bound (подсчёт суммы)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Команды миграций
+        Комментарий
       
     </span>
   </a>
@@ -441,10 +394,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-15" class="md-nav__link">
+  <a href="#2-io-bound-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Лабораторная работа (9 + 15 баллов)
+        Задача 2 — I/O-bound (парсинг веб-страниц)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 2 — I/O-bound (парсинг веб-страниц)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Комментарий
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сводная таблица
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Рекомендации по выбору подхода
       
     </span>
   </a>
@@ -455,6 +447,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Теория
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -486,44 +505,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#11-fastapi-" class="md-nav__link">
+  <a href="#1-cpu-bound" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Практика 1.1 — Базовое FastAPI-приложение
+        Задача 1 — CPU-bound (подсчёт суммы)
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-sqlmodel-postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Практика 1.2 — SQLModel и PostgreSQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13-env" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Практика 1.3 — Миграции, ENV, структура
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Практика 1.3 — Миграции, ENV, структура">
+    <nav class="md-nav" aria-label="Задача 1 — CPU-bound (подсчёт суммы)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Команды миграций
+        Комментарий
       
     </span>
   </a>
@@ -536,10 +533,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-15" class="md-nav__link">
+  <a href="#2-io-bound-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Лабораторная работа (9 + 15 баллов)
+        Задача 2 — I/O-bound (парсинг веб-страниц)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 2 — I/O-bound (парсинг веб-страниц)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Комментарий
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сводная таблица
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Рекомендации по выбору подхода
       
     </span>
   </a>
@@ -563,116 +599,115 @@
 
 
 
-<h1 id="1113">Практики 1.1–1.3<a class="headerlink" href="#1113" title="Permanent link">&para;</a></h1>
-<p>Каждая практика реализована в отдельной папке / этапе проекта.</p>
-<h2 id="11-fastapi-">Практика 1.1 — Базовое FastAPI-приложение<a class="headerlink" href="#11-fastapi-" title="Permanent link">&para;</a></h2>
-<p><strong>Папка:</strong> <code>practice_1_1/</code></p>
-<p>Реализовано:</p>
-<ul>
-<li>GET <code>/</code> — приветствие</li>
-<li>Временная БД (<code>temp_bd</code>) с 2 профилями</li>
-<li>CRUD для профилей (<code>/profiles_list</code>, <code>/profile/{id}</code>, POST, PUT, DELETE)</li>
-<li>Pydantic-модели: <code>Profile</code>, <code>Skill</code>, <code>ProfilePreferences</code></li>
-<li>Вложенный объект (<code>preferences</code>) и список объектов (<code>skills</code>)</li>
-<li>Отдельное API для навыков (<code>/skills_list</code>, <code>/skill/{id}</code>, POST)</li>
-<li>Аннотация типов и <code>response_model</code></li>
-</ul>
-<p>Запуск:
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>practice_1_1
-uvicorn<span class="w"> </span>main:app<span class="w"> </span>--reload<span class="w"> </span>--port<span class="w"> </span><span class="m">8001</span>
-</code></pre></div></p>
-<h2 id="12-sqlmodel-postgresql">Практика 1.2 — SQLModel и PostgreSQL<a class="headerlink" href="#12-sqlmodel-postgresql" title="Permanent link">&para;</a></h2>
-<p><strong>Папка:</strong> <code>app/</code></p>
-<p>Реализовано:</p>
-<ul>
-<li>Подключение к PostgreSQL (<code>app/core/database.py</code>)</li>
-<li>SQLModel-модели с отношениями one-to-many и many-to-many</li>
-<li>Ассоциативные сущности с дополнительными полями:</li>
-<li><code>ProfileSkillLink.proficiency_level</code></li>
-<li><code>TeamMember.role</code></li>
-<li>CRUD через сессии SQLModel и <code>Depends(get_session)</code></li>
-<li>GET-запросы с вложенными объектами через <code>response_model</code> (схемы в <code>app/schemas/responses.py</code>)</li>
-<li>PATCH для частичного обновления</li>
-</ul>
-<h2 id="13-env">Практика 1.3 — Миграции, ENV, структура<a class="headerlink" href="#13-env" title="Permanent link">&para;</a></h2>
-<p>Реализовано:</p>
-<ul>
-<li><strong>Alembic:</strong> <code>migrations/</code>, <code>alembic.ini</code>, начальная миграция <code>001_initial.py</code></li>
-<li><strong><code>.env</code>:</strong> переменные <code>DB_URL</code>, <code>SECRET_KEY</code> через <code>python-dotenv</code></li>
-<li><strong><code>.gitignore</code>:</strong> исключены <code>venv/</code>, <code>*.env</code>, <code>__pycache__/</code>, <code>site/</code></li>
-<li><strong>Структура проекта:</strong> разделение на <code>api/</code>, <code>core/</code>, <code>models/</code>, <code>schemas/</code></li>
-<li>URL БД для Alembic передаётся из <code>.env</code> в <code>migrations/env.py</code></li>
-</ul>
-<h3 id="_1">Команды миграций<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Применить все миграции</span>
-alembic<span class="w"> </span>upgrade<span class="w"> </span>head
-
-<span class="c1"># Создать новую миграцию</span>
-alembic<span class="w"> </span>revision<span class="w"> </span>--autogenerate<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;описание&quot;</span>
-
-<span class="c1"># Откатить</span>
-alembic<span class="w"> </span>downgrade<span class="w"> </span>-1
-</code></pre></div>
-<h2 id="9-15">Лабораторная работа (9 + 15 баллов)<a class="headerlink" href="#9-15" title="Permanent link">&para;</a></h2>
-<p>Помимо практик, реализовано полное серверное приложение:</p>
+<h1 id="_1">Замеры и сравнение результатов<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Все замеры выполнены на Windows 10, Python 3.14, <code>NUM_WORKERS=4</code>.</p>
+<h2 id="1-cpu-bound">Задача 1 — CPU-bound (подсчёт суммы)<a class="headerlink" href="#1-cpu-bound" title="Permanent link">&para;</a></h2>
+<p>Параметры: <code>QUICK_MODE=1</code>, <code>N = 50_000_000</code>, 4 воркера.</p>
 <table>
 <thead>
 <tr>
-<th>Критерий</th>
-<th>Статус</th>
+<th>Подход</th>
+<th>Время (с)</th>
+<th>Ускорение относительно threading</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>5+ таблиц</td>
-<td>✓ 8 таблиц</td>
+<td>threading</td>
+<td>1.65</td>
+<td>1.00×</td>
 </tr>
 <tr>
-<td>One-to-many</td>
-<td>✓ User→Project, Project→Team, Project→Task</td>
+<td>multiprocessing</td>
+<td>0.67</td>
+<td><strong>2.44×</strong></td>
 </tr>
 <tr>
-<td>Many-to-many</td>
-<td>✓ Profile↔Skill, Team↔User</td>
-</tr>
-<tr>
-<td>Ассоциативная сущность с полем связи</td>
-<td>✓ proficiency_level, role</td>
-</tr>
-<tr>
-<td>CRUD API</td>
-<td>✓ Все сущности</td>
-</tr>
-<tr>
-<td>Вложенные GET</td>
-<td>✓ Profile, Project, Team</td>
-</tr>
-<tr>
-<td>Alembic</td>
-<td>✓</td>
-</tr>
-<tr>
-<td>Аннотация типов</td>
-<td>✓</td>
-</tr>
-<tr>
-<td>Файловая структура</td>
-<td>✓</td>
-</tr>
-<tr>
-<td>JWT авторизация</td>
-<td>✓</td>
-</tr>
-<tr>
-<td>Регистрация / смена пароля</td>
-<td>✓</td>
-</tr>
-<tr>
-<td>Ручная аутентификация JWT</td>
-<td>✓</td>
+<td>asyncio</td>
+<td>1.68</td>
+<td>0.98×</td>
 </tr>
 </tbody>
 </table>
+<h3 id="_2">Комментарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><strong>Threading (1.65 с)</strong> — потоки не дают ускорения на CPU-bound задаче: GIL позволяет только одному потоку выполнять Python-байткод в момент времени. Время сопоставимо с однопоточным выполнением.</p>
+<p><strong>Multiprocessing (0.67 с)</strong> — лучший результат. Каждый процесс имеет собственный интерпретатор и свой GIL, поэтому четыре ядра загружаются параллельно. Ускорение ~2.4× при четырёх воркерах (не идеальные 4× из-за накладных расходов на создание процессов и передачу данных).</p>
+<p><strong>Asyncio (1.68 с)</strong> — худший среди «параллельных» вариантов для CPU. Корутины выполняются в одном потоке; <code>calculate_sum()</code> — синхронная блокирующая функция, event loop не может переключаться, пока она не завершится. Фактически последовательное выполнение.</p>
+<hr />
+<h2 id="2-io-bound-">Задача 2 — I/O-bound (парсинг веб-страниц)<a class="headerlink" href="#2-io-bound-" title="Permanent link">&para;</a></h2>
+<p>Параметры: 12 URL, <code>NUM_WORKERS=4</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Подход</th>
+<th>Время (с)</th>
+<th>Ускорение относительно threading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>threading</td>
+<td>3.09</td>
+<td>1.00×</td>
+</tr>
+<tr>
+<td>multiprocessing</td>
+<td>3.71</td>
+<td>0.83×</td>
+</tr>
+<tr>
+<td>asyncio + aiohttp</td>
+<td>1.24</td>
+<td><strong>2.49×</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">Комментарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><strong>Threading (3.09 с)</strong> — хороший результат для I/O. Пока один поток ожидает ответ сервера, GIL освобождается и другие потоки могут работать. Подходит для сетевых задач с умеренным числом соединений.</p>
+<p><strong>Multiprocessing (3.71 с)</strong> — медленнее threading. Каждый процесс — отдельная копия памяти, затраты на fork/spawn и сериализацию аргументов. Для 12 HTTP-запросов это избыточно.</p>
+<p><strong>Asyncio + aiohttp (1.24 с)</strong> — лучший результат. Один поток обслуживает десятки одновременных соединений без блокировки. Нет накладных расходов на потоки и процессы.</p>
+<hr />
+<h2 id="_4">Сводная таблица<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Тип задачи</th>
+<th>threading</th>
+<th>multiprocessing</th>
+<th>asyncio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU-bound (сумма в цикле)</td>
+<td>Слабо</td>
+<td><strong>Лучший выбор</strong></td>
+<td>Слабо</td>
+</tr>
+<tr>
+<td>I/O-bound (HTTP, БД)</td>
+<td>Хорошо</td>
+<td>Избыточно</td>
+<td><strong>Лучший выбор</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">Рекомендации по выбору подхода<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[Какая задача?] --&gt; B{CPU или I/O?}
+    B --&gt;|CPU-bound| C[multiprocessing]
+    B --&gt;|I/O-bound| D{Много соединений?}
+    D --&gt;|Да| E[asyncio]
+    D --&gt;|Нет, простой код| F[threading]
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Практическое правило</p>
+<ul>
+<li>Вычисления → <code>multiprocessing</code> или <code>concurrent.futures.ProcessPoolExecutor</code></li>
+<li>Сеть, файлы, БД → <code>asyncio</code> или <code>threading</code></li>
+<li>Не смешивайте без необходимости: для CPU внутри async используйте <code>run_in_executor</code></li>
+</ul>
+</div>
 
 
 
