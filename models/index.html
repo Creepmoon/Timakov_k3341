@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Документация к программам сравнения threading, multiprocessing и asyncio">
+        <meta name="description" content="Документация к серверному приложению платформы поиска партнёров для проектов">
       
       
       
@@ -14,7 +14,7 @@
         <link rel="prev" href="../setup/">
       
       
-        <link rel="next" href="../task2/">
+        <link rel="next" href="../api/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Задача 1 — Подсчёт суммы - Лабораторная работа 2 — Потоки, процессы, асинхронность</title>
+        <title>Модель данных - CollabPlatform — Лабораторная работа 1</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#_1" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href=".." title="Лабораторная работа 2 — Потоки, процессы, асинхронность" class="md-header__button md-logo" aria-label="Лабораторная работа 2 — Потоки, процессы, асинхронность" data-md-component="logo">
+    <a href=".." title="CollabPlatform — Лабораторная работа 1" class="md-header__button md-logo" aria-label="CollabPlatform — Лабораторная работа 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,13 +96,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Лабораторная работа 2 — Потоки, процессы, асинхронность
+            CollabPlatform — Лабораторная работа 1
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Задача 1 — Подсчёт суммы
+              Модель данных
             
           </span>
         </div>
@@ -180,13 +180,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Лабораторная работа 2 — Потоки, процессы, асинхронность" class="md-nav__button md-logo" aria-label="Лабораторная работа 2 — Потоки, процессы, асинхронность" data-md-component="logo">
+    <a href=".." title="CollabPlatform — Лабораторная работа 1" class="md-nav__button md-logo" aria-label="CollabPlatform — Лабораторная работа 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Лабораторная работа 2 — Потоки, процессы, асинхронность
+    CollabPlatform — Лабораторная работа 1
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -268,7 +268,7 @@
   <span class="md-ellipsis">
     
   
-    Задача 1 — Подсчёт суммы
+    Модель данных
   
 
     
@@ -286,7 +286,7 @@
   <span class="md-ellipsis">
     
   
-    Задача 1 — Подсчёт суммы
+    Модель данных
   
 
     
@@ -312,10 +312,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#er-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Постановка
+        ER-диаграмма
       
     </span>
   </a>
@@ -326,10 +326,104 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Файлы
+        Таблицы
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Таблицы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profileskilllink-m2m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ProfileSkillLink (M2M)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teammember-m2m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TeamMember (M2M)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -337,107 +431,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Общая логика
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Общая логика">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#calculate_sumstart-end" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        calculate_sum(start, end)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#split_rangetotal-parts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        split_range(total, parts)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Реализации
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Реализации">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#threading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Threading
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiprocessing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multiprocessing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#asyncio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Asyncio
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Запуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Настройка
+        Типы связей
       
     </span>
   </a>
@@ -459,14 +453,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../task2/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Задача 2 — Парсинг веб-страниц
+    API
   
 
     
@@ -486,14 +480,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../benchmarks/" class="md-nav__link">
+      <a href="../auth/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Замеры и сравнение
+    Авторизация
   
 
     
@@ -513,14 +507,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory/" class="md-nav__link">
+      <a href="../practices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Теория
+    Практики
   
 
     
@@ -560,10 +554,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#er-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Постановка
+        ER-диаграмма
       
     </span>
   </a>
@@ -574,10 +568,104 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Файлы
+        Таблицы
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Таблицы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profileskilllink-m2m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ProfileSkillLink (M2M)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teammember-m2m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TeamMember (M2M)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -585,107 +673,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Общая логика
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Общая логика">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#calculate_sumstart-end" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        calculate_sum(start, end)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#split_rangetotal-parts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        split_range(total, parts)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Реализации
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Реализации">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#threading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Threading
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiprocessing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multiprocessing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#asyncio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Asyncio
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Запуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Настройка
+        Типы связей
       
     </span>
   </a>
@@ -709,130 +697,191 @@
 
 
 
-<h1 id="1">Задача 1 — Подсчёт суммы<a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
-<p>Параллельный подсчёт суммы всех целых чисел от 1 до N с использованием трёх подходов.</p>
-<h2 id="_1">Постановка<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Написать три программы: <code>threading</code>, <code>multiprocessing</code>, <code>asyncio</code></li>
-<li>Каждая содержит функцию <code>calculate_sum(start, end)</code></li>
-<li>Диапазон <code>[1, N]</code> разбивается на несколько подзадач</li>
-<li>Замерить и сравнить время выполнения</li>
-</ul>
-<p>По заданию <code>N = 10_000_000_000_000</code> (10¹³).</p>
-<h2 id="_2">Файлы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Файл</th>
-<th>Подход</th>
-<th>Ключевые модули</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>task1/threading_sum.py</code></td>
-<td>Потоки</td>
-<td><code>concurrent.futures.ThreadPoolExecutor</code></td>
-</tr>
-<tr>
-<td><code>task1/multiprocessing_sum.py</code></td>
-<td>Процессы</td>
-<td><code>concurrent.futures.ProcessPoolExecutor</code></td>
-</tr>
-<tr>
-<td><code>task1/async_sum.py</code></td>
-<td>Асинхронность</td>
-<td><code>asyncio</code>, <code>async</code>/<code>await</code></td>
-</tr>
-<tr>
-<td><code>task1/common.py</code></td>
-<td>Общий код</td>
-<td><code>calculate_sum()</code>, <code>split_range()</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="_3">Общая логика<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>flowchart LR
-    A[Диапазон 1..N] --&gt; B[split_range]
-    B --&gt; C1[Чанк 1]
-    B --&gt; C2[Чанк 2]
-    B --&gt; C3[Чанк 3]
-    B --&gt; C4[Чанк N]
-    C1 --&gt; D[calculate_sum]
-    C2 --&gt; D
-    C3 --&gt; D
-    C4 --&gt; D
-    D --&gt; E[Сумма результатов]
-</code></pre></div>
-<h3 id="calculate_sumstart-end"><code>calculate_sum(start, end)</code><a class="headerlink" href="#calculate_sumstart-end" title="Permanent link">&para;</a></h3>
-<p>Считает сумму целых чисел от <code>start</code> до <code>end</code> включительно в цикле:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calculate_sum</span><span class="p">(</span><span class="n">start</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-  <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>
-  <span class="k">return</span> <span class="n">total</span>
-</code></pre></div>
-<h3 id="split_rangetotal-parts"><code>split_range(total, parts)</code><a class="headerlink" href="#split_rangetotal-parts" title="Permanent link">&para;</a></h3>
-<p>Делит диапазон <code>[1, total]</code> на <code>parts</code> непересекающихся поддиапазонов для параллельной обработки.</p>
-<h2 id="_4">Реализации<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="threading">Threading<a class="headerlink" href="#threading" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">NUM_WORKERS</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
-  <span class="n">futures</span> <span class="o">=</span> <span class="p">[</span><span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">calculate_sum</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="n">ranges</span><span class="p">]</span>
-  <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">futures</span><span class="p">):</span>
-    <span class="n">total</span> <span class="o">+=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
-</code></pre></div>
-<p>Потоки создаются в <strong>одном процессе</strong>. Из-за GIL параллельного выполнения Python-байткода почти нет.</p>
-<h3 id="multiprocessing">Multiprocessing<a class="headerlink" href="#multiprocessing" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">ProcessPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">NUM_WORKERS</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
-  <span class="n">futures</span> <span class="o">=</span> <span class="p">[</span><span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">calculate_sum</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="n">ranges</span><span class="p">]</span>
-</code></pre></div>
-<p>Каждый воркер — <strong>отдельный процесс</strong> со своим интерпретатором Python. GIL не мешает, загружаются все ядра CPU.</p>
-<h3 id="asyncio">Asyncio<a class="headerlink" href="#asyncio" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">calculate_sum_async</span><span class="p">(</span><span class="n">start</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-  <span class="k">return</span> <span class="n">calculate_sum</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+<h1 id="_1">Модель данных<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>В проекте реализовано <strong>8 таблиц</strong> с отношениями one-to-many и many-to-many.</p>
+<h2 id="er-">ER-диаграмма<a class="headerlink" href="#er-" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>erDiagram
+    USER ||--o| PROFILE : has
+    USER ||--o{ PROJECT : creates
+    USER ||--o{ TEAM_MEMBER : participates
+    USER ||--o{ TASK : assigned
+    PROFILE ||--o{ PROFILE_SKILL_LINK : has
+    SKILL ||--o{ PROFILE_SKILL_LINK : linked
+    PROJECT ||--o{ TEAM : contains
+    PROJECT ||--o{ TASK : has
+    TEAM ||--o{ TEAM_MEMBER : includes
 
-<span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">calculate_sum_async</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">))</span> <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="n">ranges</span><span class="p">]</span>
-<span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
+    USER {
+        int id PK
+        string email UK
+        string username UK
+        string hashed_password
+        bool is_active
+        datetime created_at
+    }
+
+    PROFILE {
+        int id PK
+        int user_id FK UK
+        string bio
+        int experience_years
+        string interests
+        string project_preferences
+    }
+
+    SKILL {
+        int id PK
+        string name UK
+        string description
+        enum category
+    }
+
+    PROFILE_SKILL_LINK {
+        int profile_id PK_FK
+        int skill_id PK_FK
+        enum proficiency_level
+    }
+
+    PROJECT {
+        int id PK
+        int creator_id FK
+        string title
+        string description
+        enum status
+        datetime deadline
+    }
+
+    TEAM {
+        int id PK
+        int project_id FK
+        string name
+        string description
+    }
+
+    TEAM_MEMBER {
+        int team_id PK_FK
+        int user_id PK_FK
+        enum role
+        datetime joined_at
+    }
+
+    TASK {
+        int id PK
+        int project_id FK
+        int assignee_id FK
+        string title
+        enum status
+        int progress
+        datetime deadline
+    }
 </code></pre></div>
-<p>Корутины выполняются в <strong>одном потоке</strong>. Синхронный <code>calculate_sum()</code> блокирует event loop, поэтому параллелизма для CPU-bound задачи нет.</p>
-<h2 id="_5">Запуск<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>task1
-python<span class="w"> </span>threading_sum.py
-python<span class="w"> </span>multiprocessing_sum.py
-python<span class="w"> </span>async_sum.py
-</code></pre></div>
-<p>Пример вывода:</p>
-<div class="highlight"><pre><span></span><code>Подход: multiprocessing
-Диапазон: 1 .. 50,000,000
-Число процессов: 4
-Результат: 1250000025000000
-Ожидаемое: 1250000025000000
-Время: 0.6734 с
-</code></pre></div>
-<h2 id="_6">Настройка<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_2">Таблицы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="user">User<a class="headerlink" href="#user" title="Permanent link">&para;</a></h3>
+<p>Учётная запись пользователя. Связь one-to-one с <code>Profile</code>.</p>
+<h3 id="profile">Profile<a class="headerlink" href="#profile" title="Permanent link">&para;</a></h3>
+<p>Расширенная информация о пользователе: биография, опыт, интересы, предпочтения по проектам.</p>
+<h3 id="skill">Skill<a class="headerlink" href="#skill" title="Permanent link">&para;</a></h3>
+<p>Справочник навыков (программирование, дизайн, менеджмент и т.д.).</p>
+<h3 id="profileskilllink-m2m">ProfileSkillLink (M2M)<a class="headerlink" href="#profileskilllink-m2m" title="Permanent link">&para;</a></h3>
+<p>Ассоциативная таблица между профилем и навыком.</p>
 <table>
 <thead>
 <tr>
-<th>Переменная</th>
+<th>Поле</th>
 <th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>QUICK_MODE=1</code></td>
-<td><code>N = 50_000_000</code> (для замеров)</td>
+<td><code>profile_id</code></td>
+<td>FK на профиль</td>
 </tr>
 <tr>
-<td><code>QUICK_MODE=0</code></td>
-<td><code>N = 10_000_000_000_000</code> (по заданию)</td>
+<td><code>skill_id</code></td>
+<td>FK на навык</td>
 </tr>
 <tr>
-<td><code>NUM_WORKERS</code></td>
-<td>Число потоков / процессов / задач</td>
+<td><strong><code>proficiency_level</code></strong></td>
+<td>Уровень владения: beginner / intermediate / advanced / expert</td>
 </tr>
 </tbody>
 </table>
-<p>Результаты замеров — в разделе <a href="../benchmarks/">Замеры и сравнение</a>.</p>
+<h3 id="project">Project<a class="headerlink" href="#project" title="Permanent link">&para;</a></h3>
+<p>Проект с целями, требованиями и ожидаемыми результатами. Создатель — <code>User</code> (one-to-many).</p>
+<h3 id="team">Team<a class="headerlink" href="#team" title="Permanent link">&para;</a></h3>
+<p>Команда, привязанная к проекту (one-to-many: Project → Team).</p>
+<h3 id="teammember-m2m">TeamMember (M2M)<a class="headerlink" href="#teammember-m2m" title="Permanent link">&para;</a></h3>
+<p>Ассоциативная таблица между командой и пользователем.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>team_id</code></td>
+<td>FK на команду</td>
+</tr>
+<tr>
+<td><code>user_id</code></td>
+<td>FK на пользователя</td>
+</tr>
+<tr>
+<td><strong><code>role</code></strong></td>
+<td>Роль: lead / developer / designer / manager / member</td>
+</tr>
+<tr>
+<td><code>joined_at</code></td>
+<td>Дата вступления</td>
+</tr>
+</tbody>
+</table>
+<h3 id="task">Task<a class="headerlink" href="#task" title="Permanent link">&para;</a></h3>
+<p>Задача внутри проекта с дедлайном, статусом и прогрессом (0–100%).</p>
+<h2 id="_3">Типы связей<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Связь</th>
+<th>Тип</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User → Profile</td>
+<td>One-to-One</td>
+<td>У каждого пользователя один профиль</td>
+</tr>
+<tr>
+<td>User → Project</td>
+<td>One-to-Many</td>
+<td>Пользователь создаёт несколько проектов</td>
+</tr>
+<tr>
+<td>Project → Team</td>
+<td>One-to-Many</td>
+<td>В проекте несколько команд</td>
+</tr>
+<tr>
+<td>Project → Task</td>
+<td>One-to-Many</td>
+<td>В проекте много задач</td>
+</tr>
+<tr>
+<td>Profile ↔ Skill</td>
+<td>Many-to-Many</td>
+<td>Через <code>ProfileSkillLink</code></td>
+</tr>
+<tr>
+<td>Team ↔ User</td>
+<td>Many-to-Many</td>
+<td>Через <code>TeamMember</code></td>
+</tr>
+</tbody>
+</table>
 
 
 

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Документация к программам сравнения threading, multiprocessing и asyncio">
+        <meta name="description" content="Документация к серверному приложению платформы поиска партнёров для проектов">
       
       
       
@@ -14,7 +14,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../task1/">
+        <link rel="next" href="../models/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Установка - Лабораторная работа 2 — Потоки, процессы, асинхронность</title>
+        <title>Установка - CollabPlatform — Лабораторная работа 1</title>
       
     
     
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href=".." title="Лабораторная работа 2 — Потоки, процессы, асинхронность" class="md-header__button md-logo" aria-label="Лабораторная работа 2 — Потоки, процессы, асинхронность" data-md-component="logo">
+    <a href=".." title="CollabPlatform — Лабораторная работа 1" class="md-header__button md-logo" aria-label="CollabPlatform — Лабораторная работа 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Лабораторная работа 2 — Потоки, процессы, асинхронность
+            CollabPlatform — Лабораторная работа 1
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -180,13 +180,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Лабораторная работа 2 — Потоки, процессы, асинхронность" class="md-nav__button md-logo" aria-label="Лабораторная работа 2 — Потоки, процессы, асинхронность" data-md-component="logo">
+    <a href=".." title="CollabPlatform — Лабораторная работа 1" class="md-nav__button md-logo" aria-label="CollabPlatform — Лабораторная работа 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Лабораторная работа 2 — Потоки, процессы, асинхронность
+    CollabPlatform — Лабораторная работа 1
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -299,7 +299,7 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Виртуальное окружение
+        1. Клонирование и виртуальное окружение
       
     </span>
   </a>
@@ -318,77 +318,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-postgresql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Переменные окружения
+        3. Настройка PostgreSQL
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. Переменные окружения">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        База данных
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#4-alembic" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Запуск программ
+        4. Миграции Alembic
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. Запуск программ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 1
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 2
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-mkdocs" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Документация MkDocs
+        5. Запуск сервера
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Документация MkDocs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практика 1.1 (отдельная папка)
       
     </span>
   </a>
@@ -410,14 +387,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../task1/" class="md-nav__link">
+      <a href="../models/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Задача 1 — Подсчёт суммы
+    Модель данных
   
 
     
@@ -437,14 +414,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../task2/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Задача 2 — Парсинг веб-страниц
+    API
   
 
     
@@ -464,14 +441,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../benchmarks/" class="md-nav__link">
+      <a href="../auth/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Замеры и сравнение
+    Авторизация
   
 
     
@@ -491,14 +468,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory/" class="md-nav__link">
+      <a href="../practices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Теория
+    Практики
   
 
     
@@ -552,7 +529,7 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Виртуальное окружение
+        1. Клонирование и виртуальное окружение
       
     </span>
   </a>
@@ -571,77 +548,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-postgresql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Переменные окружения
+        3. Настройка PostgreSQL
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. Переменные окружения">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        База данных
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#4-alembic" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Запуск программ
+        4. Миграции Alembic
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. Запуск программ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 1
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 2
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-mkdocs" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Документация MkDocs
+        5. Запуск сервера
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Документация MkDocs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практика 1.1 (отдельная папка)
       
     </span>
   </a>
@@ -665,124 +619,81 @@
 
 
 
-<h1 id="_1">Установка и настройка<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">Установка и запуск<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">Требования<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Python 3.10+</li>
-<li>Доступ в интернет (для задачи 2)</li>
-<li>PostgreSQL 14+ — опционально, для интеграции с ЛР1 (CollabPlatform, папка <code>../lr1</code>)</li>
+<li>PostgreSQL 14+</li>
 </ul>
-<h2 id="1">1. Виртуальное окружение<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>students/K3341/Timakov_Egor/lr2
+<h2 id="1">1. Клонирование и виртуальное окружение<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>students/K3341/Timakov_Egor/lr1
 python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
 </code></pre></div>
-<p><strong>Windows:</strong></p>
+<p><strong>Windows:</strong>
 <div class="highlight"><pre><span></span><code>venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-</code></pre></div>
-<p><strong>Linux / macOS:</strong></p>
+</code></pre></div></p>
+<p><strong>Linux/macOS:</strong>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</code></pre></div>
+</code></pre></div></p>
 <h2 id="2">2. Установка зависимостей<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-<p>Основные пакеты:</p>
-<table>
-<thead>
-<tr>
-<th>Пакет</th>
-<th>Назначение</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>requests</code></td>
-<td>HTTP-запросы (threading, multiprocessing)</td>
-</tr>
-<tr>
-<td><code>aiohttp</code></td>
-<td>Асинхронные HTTP-запросы</td>
-</tr>
-<tr>
-<td><code>beautifulsoup4</code></td>
-<td>Парсинг HTML</td>
-</tr>
-<tr>
-<td><code>sqlmodel</code></td>
-<td>ORM и работа с БД</td>
-</tr>
-<tr>
-<td><code>python-dotenv</code></td>
-<td>Переменные окружения</td>
-</tr>
-<tr>
-<td><code>mkdocs</code>, <code>mkdocs-material</code></td>
-<td>Документация</td>
-</tr>
-</tbody>
-</table>
-<h2 id="3">3. Переменные окружения<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>Скопируйте шаблон:</p>
-<div class="highlight"><pre><span></span><code>copy<span class="w"> </span>.env.example<span class="w"> </span>.env<span class="w">     </span><span class="c1"># Windows</span>
-cp<span class="w"> </span>.env.example<span class="w"> </span>.env<span class="w">       </span><span class="c1"># Linux / macOS</span>
+<h2 id="3-postgresql">3. Настройка PostgreSQL<a class="headerlink" href="#3-postgresql" title="Permanent link">&para;</a></h2>
+<p>Создайте базу данных:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">collab_platform_db</span><span class="p">;</span>
 </code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Переменная</th>
-<th>Описание</th>
-<th>По умолчанию</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>DB_URL</code></td>
-<td>Строка подключения к БД</td>
-<td><code>sqlite:///parsed_pages.db</code></td>
-</tr>
-<tr>
-<td><code>QUICK_MODE</code></td>
-<td>Быстрый режим для задачи 1 (<code>1</code> / <code>0</code>)</td>
-<td><code>1</code></td>
-</tr>
-<tr>
-<td><code>NUM_WORKERS</code></td>
-<td>Число потоков / процессов</td>
-<td><code>4</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="_3">База данных<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p><strong>SQLite (по умолчанию)</strong> — файл <code>task2/parsed_pages.db</code>, не требует установки сервера.</p>
-<p><strong>PostgreSQL из ЛР1</strong> — укажите в <code>.env</code>:</p>
+<p>Скопируйте файл окружения и укажите параметры подключения:</p>
+<div class="highlight"><pre><span></span><code>copy<span class="w"> </span>.env.example<span class="w"> </span>.env
+</code></pre></div>
+<p>Пример <code>.env</code>:</p>
 <div class="highlight"><pre><span></span><code>DB_URL=postgresql://postgres:123@localhost/collab_platform_db
+SECRET_KEY=your-super-secret-key-change-in-production
+ACCESS_TOKEN_EXPIRE_MINUTES=60
 </code></pre></div>
-<p>Таблица <code>parsed_page</code> создаётся автоматически при первом запуске парсера.</p>
-<h2 id="4">4. Запуск программ<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<h3 id="1_1">Задача 1<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>task1
-python<span class="w"> </span>threading_sum.py
-python<span class="w"> </span>multiprocessing_sum.py
-python<span class="w"> </span>async_sum.py
+<h2 id="4-alembic">4. Миграции Alembic<a class="headerlink" href="#4-alembic" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>alembic<span class="w"> </span>upgrade<span class="w"> </span>head
 </code></pre></div>
-<h3 id="2_1">Задача 2<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>task2
-python<span class="w"> </span>threading_parser.py
-python<span class="w"> </span>multiprocessing_parser.py
-python<span class="w"> </span>async_parser.py
-</code></pre></div>
-<h2 id="5-mkdocs">5. Документация MkDocs<a class="headerlink" href="#5-mkdocs" title="Permanent link">&para;</a></h2>
-<p>Сборка и локальный просмотр:</p>
-<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
-</code></pre></div>
-<p>Статическая сборка в папку <code>site/</code>:</p>
-<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build
+<p>Для создания новой миграции после изменения моделей:</p>
+<div class="highlight"><pre><span></span><code>alembic<span class="w"> </span>revision<span class="w"> </span>--autogenerate<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;описание изменений&quot;</span>
+alembic<span class="w"> </span>upgrade<span class="w"> </span>head
 </code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">Быстрый режим задачи 1</p>
-<p>По заданию диапазон — от 1 до <code>10_000_000_000_000</code>. Полный перебор в цикле
-на таком объёме нереалистичен, поэтому по умолчанию <code>QUICK_MODE=1</code> и
-<code>N = 50_000_000</code>. Для полного диапазона: <code>QUICK_MODE=0</code>.</p>
+<p class="admonition-title">Note</p>
+<p>URL базы данных в <code>alembic.ini</code> переопределяется из <code>.env</code> в файле <code>migrations/env.py</code> через <code>python-dotenv</code>.</p>
 </div>
+<h2 id="5">5. Запуск сервера<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>uvicorn<span class="w"> </span>app.main:app<span class="w"> </span>--reload
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http://127.0.0.1:8000</td>
+<td>Корневой эндпоинт</td>
+</tr>
+<tr>
+<td>http://127.0.0.1:8000/docs</td>
+<td>Swagger UI</td>
+</tr>
+<tr>
+<td>http://127.0.0.1:8000/redoc</td>
+<td>ReDoc</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-mkdocs">6. Документация MkDocs<a class="headerlink" href="#6-mkdocs" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
+</code></pre></div>
+<p>Документация будет доступна на http://127.0.0.1:8001</p>
+<h2 id="11">Практика 1.1 (отдельная папка)<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>practice_1_1
+uvicorn<span class="w"> </span>main:app<span class="w"> </span>--reload<span class="w"> </span>--port<span class="w"> </span><span class="m">8001</span>
+</code></pre></div>
 
 
 

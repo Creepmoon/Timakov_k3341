@@ -6,15 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Документация к программам сравнения threading, multiprocessing и asyncio">
+        <meta name="description" content="Документация к серверному приложению платформы поиска партнёров для проектов">
       
       
       
       
-        <link rel="prev" href="../task1/">
+        <link rel="prev" href="../api/">
       
       
-        <link rel="next" href="../benchmarks/">
+        <link rel="next" href="../practices/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Задача 2 — Парсинг веб-страниц - Лабораторная работа 2 — Потоки, процессы, асинхронность</title>
+        <title>Авторизация - CollabPlatform — Лабораторная работа 1</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2-" class="md-skip">
+        <a href="#_1" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href=".." title="Лабораторная работа 2 — Потоки, процессы, асинхронность" class="md-header__button md-logo" aria-label="Лабораторная работа 2 — Потоки, процессы, асинхронность" data-md-component="logo">
+    <a href=".." title="CollabPlatform — Лабораторная работа 1" class="md-header__button md-logo" aria-label="CollabPlatform — Лабораторная работа 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,13 +96,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Лабораторная работа 2 — Потоки, процессы, асинхронность
+            CollabPlatform — Лабораторная работа 1
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Задача 2 — Парсинг веб-страниц
+              Авторизация
             
           </span>
         </div>
@@ -180,13 +180,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Лабораторная работа 2 — Потоки, процессы, асинхронность" class="md-nav__button md-logo" aria-label="Лабораторная работа 2 — Потоки, процессы, асинхронность" data-md-component="logo">
+    <a href=".." title="CollabPlatform — Лабораторная работа 1" class="md-nav__button md-logo" aria-label="CollabPlatform — Лабораторная работа 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Лабораторная работа 2 — Потоки, процессы, асинхронность
+    CollabPlatform — Лабораторная работа 1
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -252,14 +252,41 @@
   
   
     <li class="md-nav__item">
-      <a href="../task1/" class="md-nav__link">
+      <a href="../models/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Задача 1 — Подсчёт суммы
+    Модель данных
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
   
 
     
@@ -295,7 +322,7 @@
   <span class="md-ellipsis">
     
   
-    Задача 2 — Парсинг веб-страниц
+    Авторизация
   
 
     
@@ -313,7 +340,7 @@
   <span class="md-ellipsis">
     
   
-    Задача 2 — Парсинг веб-страниц
+    Авторизация
   
 
     
@@ -339,10 +366,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Постановка
+        Регистрация
       
     </span>
   </a>
@@ -350,10 +377,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#jwt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Файлы
+        Вход и JWT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аутентификация по JWT (вручную)
       
     </span>
   </a>
@@ -364,29 +402,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Модель данных
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parse_and_saveurl" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Функция parse_and_save(url)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#url" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Список URL
+        Защищённые эндпоинты
       
     </span>
   </a>
@@ -397,41 +413,19 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Реализации
+        Дополнительные методы
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Реализации">
+    <nav class="md-nav" aria-label="Дополнительные методы">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#threading" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Threading
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiprocessing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multiprocessing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#asyncio-aiohttp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Asyncio + aiohttp
+        Смена пароля
       
     </span>
   </a>
@@ -444,21 +438,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Запуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#postgresql-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Подключение к PostgreSQL (ЛР1)
+        Переменные окружения
       
     </span>
   </a>
@@ -480,41 +463,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../benchmarks/" class="md-nav__link">
+      <a href="../practices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Замеры и сравнение
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../theory/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Теория
+    Практики
   
 
     
@@ -554,10 +510,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Постановка
+        Регистрация
       
     </span>
   </a>
@@ -565,10 +521,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#jwt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Файлы
+        Вход и JWT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аутентификация по JWT (вручную)
       
     </span>
   </a>
@@ -579,29 +546,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Модель данных
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parse_and_saveurl" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Функция parse_and_save(url)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#url" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Список URL
+        Защищённые эндпоинты
       
     </span>
   </a>
@@ -612,41 +557,19 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Реализации
+        Дополнительные методы
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Реализации">
+    <nav class="md-nav" aria-label="Дополнительные методы">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#threading" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Threading
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiprocessing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multiprocessing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#asyncio-aiohttp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Asyncio + aiohttp
+        Смена пароля
       
     </span>
   </a>
@@ -659,21 +582,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Запуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#postgresql-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Подключение к PostgreSQL (ЛР1)
+        Переменные окружения
       
     </span>
   </a>
@@ -697,158 +609,110 @@
 
 
 
-<h1 id="2-">Задача 2 — Парсинг веб-страниц<a class="headerlink" href="#2-" title="Permanent link">&para;</a></h1>
-<p>Параллельная загрузка веб-страниц, извлечение заголовка <code>&lt;title&gt;</code> и сохранение в базу данных.</p>
-<h2 id="_1">Постановка<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="_1">Авторизация<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Реализован полный функционал пользователя (задание на 15 баллов) <strong>без сторонних библиотек для аутентификации</strong> (fastapi-users, python-jose и т.п.). Используются только:</p>
 <ul>
-<li>Три программы: <code>threading</code>, <code>multiprocessing</code>, <code>asyncio</code> + <code>aiohttp</code></li>
-<li>Функция <code>parse_and_save(url)</code> — загрузка, парсинг, сохранение</li>
-<li>Список URL разбивается для параллельной обработки</li>
-<li>Данные сохраняются в БД (SQLite или PostgreSQL из ЛР1)</li>
+<li><strong>passlib + bcrypt</strong> — хэширование паролей</li>
+<li><strong>PyJWT</strong> — создание и проверка JWT-токенов</li>
 </ul>
-<h2 id="_2">Файлы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">Регистрация<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><code>POST /auth/register</code> создаёт пользователя с хэшированным паролем.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># app/core/security.py</span>
+<span class="n">pwd_context</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bcrypt&quot;</span><span class="p">],</span> <span class="n">deprecated</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">pwd_context</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="jwt">Вход и JWT<a class="headerlink" href="#jwt" title="Permanent link">&para;</a></h2>
+<p>При успешном входе генерируется access token:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">create_access_token</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">expires_delta</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">to_encode</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">expire</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+    <span class="n">to_encode</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;exp&quot;</span><span class="p">:</span> <span class="n">expire</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">jwt</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">to_encode</span><span class="p">,</span> <span class="n">SECRET_KEY</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;HS256&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>В payload токена передаётся <code>sub</code> — ID пользователя.</p>
+<h2 id="jwt_1">Аутентификация по JWT (вручную)<a class="headerlink" href="#jwt_1" title="Permanent link">&para;</a></h2>
+<p>Зависимость <code>get_current_user</code> в <code>app/core/deps.py</code> реализована вручную:</p>
+<ol>
+<li>Извлекает заголовок <code>Authorization: Bearer &lt;token&gt;</code> через <code>HTTPBearer</code></li>
+<li>Декодирует токен функцией <code>decode_access_token</code></li>
+<li>Получает <code>user_id</code> из поля <code>sub</code></li>
+<li>Загружает пользователя из БД</li>
+<li>Проверяет <code>is_active</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_current_user</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">User</span><span class="p">:</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">decode_access_token</span><span class="p">(</span><span class="n">credentials</span><span class="o">.</span><span class="n">credentials</span><span class="p">)</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sub&quot;</span><span class="p">)</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">user_id</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">user</span><span class="o">.</span><span class="n">is_active</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">403</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">user</span>
+</code></pre></div>
+<h2 id="_3">Защищённые эндпоинты<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Все CRUD-операции (кроме публичных GET) используют:</p>
+<div class="highlight"><pre><span></span><code><span class="n">current_user</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">User</span><span class="p">,</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_current_active_user</span><span class="p">)]</span>
+</code></pre></div>
+<h2 id="_4">Дополнительные методы<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Файл</th>
-<th>Назначение</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>task2/common.py</code></td>
-<td><code>parse_and_save()</code>, <code>fetch_html()</code>, <code>extract_title()</code></td>
-</tr>
-<tr>
-<td><code>task2/models.py</code></td>
-<td>SQLModel-модель <code>ParsedPage</code></td>
-</tr>
-<tr>
-<td><code>task2/database.py</code></td>
-<td>Подключение к БД, <code>init_db()</code></td>
-</tr>
-<tr>
-<td><code>task2/urls.py</code></td>
-<td>Список URL и <code>NUM_WORKERS</code></td>
-</tr>
-<tr>
-<td><code>task2/threading_parser.py</code></td>
-<td>Вариант на потоках</td>
-</tr>
-<tr>
-<td><code>task2/multiprocessing_parser.py</code></td>
-<td>Вариант на процессах</td>
-</tr>
-<tr>
-<td><code>task2/async_parser.py</code></td>
-<td>Вариант на asyncio + aiohttp</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_3">Модель данных<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Таблица <code>parsed_page</code>:</p>
-<table>
-<thead>
-<tr>
-<th>Поле</th>
-<th>Тип</th>
+<th>Эндпоинт</th>
 <th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
-<td>int, PK</td>
-<td>Идентификатор</td>
+<td><code>GET /auth/me</code></td>
+<td>Информация о текущем пользователе</td>
 </tr>
 <tr>
-<td><code>url</code></td>
-<td>str, unique</td>
-<td>Адрес страницы</td>
+<td><code>GET /users/</code></td>
+<td>Список всех пользователей</td>
 </tr>
 <tr>
-<td><code>title</code></td>
-<td>str</td>
-<td>Заголовок из <code>&lt;title&gt;</code></td>
+<td><code>GET /users/{id}</code></td>
+<td>Пользователь по ID</td>
 </tr>
 <tr>
-<td><code>parsed_at</code></td>
-<td>datetime</td>
-<td>Время парсинга</td>
+<td><code>POST /users/change-password</code></td>
+<td>Смена пароля</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ParsedPage</span><span class="p">(</span><span class="n">SQLModel</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-  <span class="nb">id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-  <span class="n">url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-  <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
-  <span class="n">parsed_at</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="parse_and_saveurl">Функция <code>parse_and_save(url)</code><a class="headerlink" href="#parse_and_saveurl" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>sequenceDiagram
-    participant P as parse_and_save
-    participant W as Веб-сервер
-    participant DB as База данных
+<h3 id="_5">Смена пароля<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="err">POST</span><span class="w"> </span><span class="err">/users/cha</span><span class="kc">n</span><span class="err">ge</span><span class="mi">-</span><span class="err">password</span>
+<span class="err">Au</span><span class="kc">t</span><span class="err">horiza</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">Bearer</span><span class="w"> </span><span class="err">&lt;</span><span class="kc">t</span><span class="err">oke</span><span class="kc">n</span><span class="err">&gt;</span>
 
-    P-&gt;&gt;W: HTTP GET url
-    W--&gt;&gt;P: HTML
-    P-&gt;&gt;P: extract_title(html)
-    P-&gt;&gt;DB: INSERT / UPDATE parsed_page
-    P--&gt;&gt;P: print результат
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;current_password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;old_secret&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;new_password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;new_secret&quot;</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>Шаги:</p>
-<ol>
-<li>Загрузка HTML (<code>requests</code> или <code>aiohttp</code>)</li>
-<li>Извлечение заголовка через BeautifulSoup</li>
-<li>Сохранение в БД (создание или обновление записи по URL)</li>
-<li>Вывод <code>[OK] url -&gt; title</code> в консоль</li>
-</ol>
-<p>При сетевой ошибке выводится <code>[FAIL]</code> без остановки остальных задач.</p>
-<h2 id="url">Список URL<a class="headerlink" href="#url" title="Permanent link">&para;</a></h2>
-<p>В <code>task2/urls.py</code> задано 12 адресов:</p>
-<ul>
-<li>python.org, docs.python.org</li>
-<li>fastapi.tiangolo.com, flask, django</li>
-<li>postgresql.org, example.com, github.com, pypi.org</li>
-<li>quotes.toscrape.com, books.toscrape.com (учебные сайты для парсинга)</li>
-<li>httpbin.org/html</li>
-</ul>
-<h2 id="_4">Реализации<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="threading">Threading<a class="headerlink" href="#threading" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>ThreadPoolExecutor</code> с <code>NUM_WORKERS</code> потоками</li>
-<li>HTTP через библиотеку <code>requests</code></li>
-<li>Пока один поток ждёт ответ сервера, другие продолжают работу</li>
-</ul>
-<h3 id="multiprocessing">Multiprocessing<a class="headerlink" href="#multiprocessing" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>ProcessPoolExecutor</code> — каждый URL обрабатывается в отдельном процессе</li>
-<li>Тот же <code>parse_and_save()</code> из <code>common.py</code></li>
-<li>Выше накладные расходы на создание процессов</li>
-</ul>
-<h3 id="asyncio-aiohttp">Asyncio + aiohttp<a class="headerlink" href="#asyncio-aiohttp" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">parse_and_save</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
-  <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
-    <span class="n">html</span> <span class="o">=</span> <span class="k">await</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
-  <span class="n">title</span> <span class="o">=</span> <span class="n">extract_title</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-  <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="n">save_title</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
-</code></pre></div>
-<ul>
-<li>Все HTTP-запросы выполняются <strong>конкурентно</strong> в одном потоке</li>
-<li>Запись в БД вынесена в <code>asyncio.to_thread()</code>, чтобы не блокировать event loop</li>
-</ul>
-<h2 id="_5">Запуск<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>task2
-python<span class="w"> </span>threading_parser.py
-python<span class="w"> </span>multiprocessing_parser.py
-python<span class="w"> </span>async_parser.py
-</code></pre></div>
-<h2 id="postgresql-1">Подключение к PostgreSQL (ЛР1)<a class="headerlink" href="#postgresql-1" title="Permanent link">&para;</a></h2>
-<p>В файле <code>.env</code>:</p>
-<div class="highlight"><pre><span></span><code>DB_URL=postgresql://postgres:123@localhost/collab_platform_db
-</code></pre></div>
-<p>Таблица <code>parsed_page</code> будет создана в той же базе, что используется в CollabPlatform.</p>
-<p>Результаты замеров — в разделе <a href="../benchmarks/">Замеры и сравнение</a>.</p>
+<p>Проверяется текущий пароль через <code>verify_password</code>, новый сохраняется в хэшированном виде.</p>
+<h2 id="_6">Переменные окружения<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Переменная</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SECRET_KEY</code></td>
+<td>Секрет для подписи JWT</td>
+</tr>
+<tr>
+<td><code>ACCESS_TOKEN_EXPIRE_MINUTES</code></td>
+<td>Время жизни токена (по умолчанию 60)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>В продакшене обязательно смените <code>SECRET_KEY</code> на криптографически стойкое значение.</p>
+</div>
 
 
 
